@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Amigos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngFor="let amigo of amigosArray">
+<ion-list>
+  <ion-item>
+    <ion-col size="6">Nome: {{amigo.nome}}</ion-col>
+  </ion-item>
+  <ion-item>
+    <ion-col  size="2">Idade: {{amigo.idade}}</ion-col>
+  </ion-item>
+  <ion-item>
+    <ion-col>Nivel: {{amigo.nivelAmizade}}</ion-col>
+  </ion-item>
+  <ion-item>
+    <ion-button (click)="ativarAction(amigo.nome)">Deletar</ion-button>
+  </ion-item>
+</ion-list>
+  
+</ion-content>
+
+<ion-buttons slot="start">
+  <ion-buttons slot="start">
+       <ion-menu-button></ion-menu-button>
+  </ion-buttons>
+  
+   
